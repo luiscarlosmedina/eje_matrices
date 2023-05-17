@@ -1,0 +1,493 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<meta name="viewport" content="width=device-width,initial-scale=1" />
+	<meta charset="utf-8">
+	<title>pagina</title>
+	<link rel="stylesheet" href="./estilo/designe.css">
+</head>
+
+<body>
+	<div class="bloque">
+		<h1 class="titulo">Imprime numeros del 1 al 50</h1>
+		<div class="estante">
+			<div class="cajon">
+				<input class="cj_boton" type="submit" value="Imprimir" onclick="numeros()">
+			</div>
+			<div class="cajon">
+				<label for="result">Resultado</label>
+				<div id="E1"></div>
+			</div>
+		</div>
+	</div>
+
+	<div class="bloque">
+		<h1 class="titulo">Imprime numeros pares e impares</h1>
+		<div class="estante">
+			<div class="cajon">
+				<input class="cj_boton" type="submit" value="Imprimir" onclick="ParImpar()">
+			</div>
+			<div class="cajon">
+				<span id="E2"></span>
+			</div>
+		</div>
+	</div>
+
+	<div class="bloque">
+		<h1 class="titulo">Pares descendentes</h1>
+		<div class="estante">
+			<div class="cajon">
+				<input type="number" placeholder="Ingresa un numero" id="valor">
+				<input class="cj_boton" type="submit" value="Generar" onclick="ParDes()">
+
+			</div>
+			<div class="cajon">
+				<span id="E3"></span>
+			</div>
+		</div>
+	</div>
+
+	<div class="bloque">
+		<h1 class="titulo">Promedio ponderado</h1>
+		<p class="informa">Ingresa los numero que desee separado por coma ( , )</p>
+		<div class="estante">
+			<div class="cajon">
+				<input type="text" placeholder="Lista de numeros" id="valor2A">
+				<input type="text" placeholder="peso de numeros" id="valor2B">
+				<input class="cj_boton" type="submit" value="Promediar" onclick="Promedio()">
+			</div>
+			<div class="cajon">
+				<label for="result">Promedio</label>
+				<input type="text" name="result" id="E4" readonly>
+			</div>
+		</div>
+	</div>
+
+	<div class="bloque">
+		<h1 class="titulo">Buscar numero en un array</h1>
+		<p class="informa">Genera un array aleatorio y luego realiza la busqueda del valor deseado</p>
+		<div class="estante">
+			<div class="cajon">
+				<input class="cj_boton" type="submit" value="Generar array" onclick="GenArray()">
+				<input type="text" placeholder="Numero a buscar" id="valor3">
+				<input class="cj_boton" type="submit" value="Buscar" onclick="BusArray()">
+			</div>
+			<div class="cajon">
+				<label for="result">Array pedido</label>
+				<input type="text" name="result" id="E5G" readonly>
+				<label for="result">Busqueda</label>
+				<span id="E5B"></span>
+			</div>
+		</div>
+	</div>
+
+	<div class="bloque">
+		<h1 class="titulo">Arreglo a pedido</h1>
+		<div class="estante">
+			<div class="cajon">
+				<input type="number" placeholder="Cantidad de numeros" id="longitud" required>
+				<input type="number" placeholder="Numero minimo" id="min" required>
+				<input type="number" placeholder="Numero maximo" id="max" required>
+				<input class="cj_boton" type="submit" value="Generar" onclick="pedidoArray()">
+			</div>
+			<div class="cajon">
+				<label for="result">Array pedido</label>
+				<input type="text" name="result" id="E6" readonly>
+			</div>
+		</div>
+	</div>
+
+	<div class="bloque">
+		<h1 class="titulo">Numeros repetidos</h1>
+		<div class="estante">
+			<div class="cajon">
+				<input type="number" placeholder="Numero a buscar" id="valor4" required>
+				<input class="cj_boton" type="submit" value="Buscar" onclick="numRep()">
+			</div>
+			<div class="cajon">
+				<label for="result">Repetidos</label>
+				<input type="text" name="result" id="E7" readonly>
+			</div>
+		</div>
+	</div>
+
+	<div class="bloque">
+		<h1 class="titulo">Convertir numero Entero a Binario</h1>
+		<div class="estante">
+			<div class="cajon">
+				<input type="text" placeholder="Numero tipo Entero" id="valor5" required>
+				<input class="cj_boton" type="submit" value="Convertir" onclick="convBin()">
+			</div>
+			<div class="cajon">
+				<label for="result">Binario</label>
+				<input type="text" name="result" id="E8" readonly>
+			</div>
+		</div>
+	</div>
+
+	<div class="bloque">
+		<h1 class="titulo">Convertir numero Binario a Entero</h1>
+		<div class="estante">
+			<div class="cajon">
+				<input type="text" inputmode="numeric" maxlength="8" pattern="^[01]$" id="binario"
+					placeholder="10100111" required>
+				<input class="cj_boton" type="submit" value="Convertir" onclick="convertirEnt()">
+			</div>
+			<div class="cajon">
+				<label for="result">Entero</label>
+				<input type="number" name="result" id="resultado" readonly>
+			</div>
+		</div>
+	</div>
+
+	<div class="bloque">
+		<h1 class="titulo">Multiplicar arreglos</h1>
+		<p class="informa">Ingresa los numero que desee multiplicar separado por coma ( , )</p>
+		<div class="estante">
+			<div class="cajon">
+				<input type="text" placeholder="Lista 1 de numeros" id="arr1">
+				<input type="text" placeholder="Lista 2 de numeros" id="arr2">
+				<input class="cj_boton" type="submit" value="Generar" onclick="multiplica()">
+			</div>
+			<div class="cajon">
+				<label for="result">Resultado</label>
+				<input type="text" name="result" id="E10" readonly>
+			</div>
+		</div>
+	</div>
+
+	<div class="bloque">
+		<h1 class="titulo">Producto punto entre arreglos</h1>
+		<p class="informa">Ingresa los numero que desee multiplicar separado por coma ( , )</p>
+		<div class="estante">
+			<div class="cajon">
+				<input type="text" placeholder="Lista 1 de numeros" id="arr3">
+				<input type="text" placeholder="Lista 2 de numeros" id="arr4">
+				<input class="cj_boton" type="submit" value="Generar" onclick="prodPunt()">
+			</div>
+			<div class="cajon">
+				<label for="result">Punto producto es</label>
+				<input type="number" name="result" id="E11" readonly>
+			</div>
+		</div>
+	</div>
+
+	<div class="bloque">
+		<h1 class="titulo">Crecimiento de la poblacion</h1>
+		<p class="informa">Para el 2022 el pais A de 25 millones de habitantes y el país B de 18,9 millones, las tasas
+			de crecimiento anual de la población serán de 2% y 3% respectivamente</p>
+		<div class="estante">
+			<div class="cajon">
+				<input class="cj_boton" type="submit" value="Generar" onclick="crecimiento()">
+			</div>
+			<div class="cajon">
+				<label for="result">Año que pais B supera al A</label>
+				<input type="number" name="result" id="E12" readonly>
+			</div>
+		</div>
+	</div>
+
+	<div class="bloque">
+		<h1 class="titulo">Suma de secuencias</h1>
+		<div class="estante">
+			<div class="cajon">
+				<input type="text" placeholder="Diguite un numero" id="valor6" required>
+				<input class="cj_boton" type="submit" value="Generar" onclick="sumSec()">
+			</div>
+			<div class="cajon">
+				<label for="result">Secuencia</label>
+				<input type="text" name="result" id="E13" readonly>
+			</div>
+		</div>
+	</div>
+
+	<div class="bloque">
+		<h1 class="titulo">Convertir for a while</h1>
+		<div class="estante">
+			<div class="cajon">
+				<img src="./img/for.png">
+				<input class="cj_boton" type="submit" value="Convertir" onclick="forToWhile()">
+			</div>
+			<div class="cajon">
+				<label for="result">Secuencia</label>
+				<div type="text" name="result" id="E14"></div>
+			</div>
+		</div>
+	</div>
+
+	<div class="bloque">
+		<h1 class="titulo">Buscar numero primo en un array</h1>
+		<p class="informa">Genera un array aleatorio y luego realiza la busqueda</p>
+		<div class="estante">
+			<div class="cajon">
+				<input class="cj_boton" type="submit" value="Generar array" onclick="GenList()">
+				<input class="cj_boton" type="submit" value="Buscar primo" onclick="BusPrimo()">
+			</div>
+			<div class="cajon">
+				<span id="E15G"></span>
+				<label for="result">Resultado</label>
+				<input type="text" name="result" id="E15B" readonly>
+			</div>
+		</div>
+	</div>
+
+	<div class="bloque">
+		<h1 class="titulo">Maximo comun divisor de dos numeros</h1>
+		<div class="estante">
+			<div class="cajon">
+				<input type="number" placeholder="Diguite numero 1" id="valor8" required>
+				<input type="number" placeholder="Diguite numero 2" id="valor9" required>
+				<input class="cj_boton" type="submit" value="Buscar MCD" onclick="MCD()">
+			</div>
+			<div class="cajon">
+				<label for="result">Maximo Comun Divisor</label>
+				<input type="text" name="result" id="C16"></input>
+			</div>
+		</div>
+	</div>
+
+	<div class="bloque">
+		<h1 class="titulo">Serie Fibonacci</h1>
+		<div class="estante">
+			<div class="cajon">
+				<input type="text" placeholder="Diguite un numero" id="valor10" required>
+				<input class="cj_boton" type="submit" value="Generar" onclick="Fibonacci()">
+			</div>
+			<div class="cajon">
+				<span id="E15G"></span>
+				<label for="result">Resultado</label>
+				<input type="text" name="result" id="E16" readonly>
+			</div>
+		</div>
+	</div>
+
+	<div class="bloque">
+		<h1 class="titulo">Sumar numero que lo compone</h1>
+		<p class="informa">Solo puede ser numero entero positivo</p>
+		<div class="estante">
+			<div class="cajon">
+				<input type="number" min="1" placeholder="Diguite un numero" id="valor12" required>
+				<input class="cj_boton" type="submit" value="Iniciar suma" onclick="SumarEp()">
+			</div>
+			<div class="cajon">
+				<label for="result">Resultado</label>
+				<input type="text" name="result" id="E17" readonly>
+			</div>
+		</div>
+	</div>
+
+	<div class="bloque">
+		<h1 class="titulo">Metodo burbuja</h1>
+		<p class="informa">Genera un array aleatorio y luego ordenarlo</p>
+		<div class="estante">
+			<div class="cajon">
+				<input class="cj_boton" type="submit" value="Generar array" onclick="genArr()">
+				<input class="cj_boton" type="submit" value="Ordenar" onclick="ordenArr()">
+			</div>
+			<div class="cajon">
+				<span id="E18G"></span>
+				<label for="result">Resultado</label>
+				<input type="text" name="result" id="E18O" readonly>
+			</div>
+		</div>
+	</div>
+
+	<div class="bloque">
+		<h1 class="titulo">Busca letras</h1>
+		<div class="estante">
+			<div class="cajon">
+				<input type="text" placeholder="escriba una frase" id="valor13" required>
+				<input type="text" placeholder="escriba una letra" id="valor14" required>
+				<input class="cj_boton" type="submit" value="Buscar" onclick="BuscaLt()">
+			</div>
+			<div class="cajon">
+				<span id="E15G"></span>
+				<label for="result">Resultado</label>
+				<input type="text" name="result" id="E15B" readonly>
+			</div>
+		</div>
+	</div>
+
+	<div class="bloque">
+		<h1 class="titulo">Matrices</h1>
+		<div class="estante">
+			<div class="cajon">
+				<span id="valor15"></span>
+				<input class="cj_boton" type="submit" value="Generar" onclick="GenMat()">
+				<input class="cj_boton" type="submit" value="Buscar par" onclick="ParMat()">
+				<input class="cj_boton" type="submit" value="Max y Min" onclick="MxMnMat()">
+			</div>
+			<div class="cajon">
+				<label for="result">Resultado</label>
+				<input type="text" name="result" id="E19X" readonly>
+				<input type="text" name="result" id="E19N" readonly>
+			</div>
+		</div>
+	</div>
+
+	<div class="bloque">
+		<h1 class="titulo">Ordenar Matriz</h1>
+		<div class="estante">
+			<div class="cajon">
+				<span id="valor16"></span>
+				<input class="cj_boton" type="submit" value="Crear Matriz" onclick="CreaMt()">
+				<div class="estante">
+					<input type="number" min="1" max="6" id="valor17" required>
+					<select name="op" id="sel">
+						<option value="0">Fila</option>
+						<option value="1">Columna</option>
+					</select>
+				</div>
+				<input class="cj_boton" type="submit" value="Ordenar" onclick="OrdenMt()">
+			</div>
+			<div class="cajon">
+				<label for="result">Resultado ordenado</label>
+				<input type="text" name="result" id="E20" readonly>
+			</div>
+		</div>
+	</div>
+
+	<div class="bloque">
+		<h1 class="titulo">Matrices iguales</h1>
+		<div class="estante">
+			<div class="cajon">
+				<label for="result">Matriz A</label>
+				<span id="valor18"></span>
+			</div>
+			<div class="cajon">
+				<input class="cj_boton" type="submit" value="Crear y comparar" onclick="nuevaMt()">
+				<input type="text" name="result" id="E21" readonly>
+			</div>
+			<div class="cajon">
+				<label for="result">Matriz B</label>
+				<span id="valor19"></span>
+			</div>
+		</div>
+	</div>
+
+	<div class="bloque">
+		<h1 class="titulo">Numero magico 4 x 4</h1>
+		<p class="informa">Ubica los numeros del 1 al 16 sin repetir</p>
+		<div class="estante">
+			<div class="cajon">
+				<table class="matriz-mg" onchange="magia()">
+					<tr>
+						<td></td>
+						<td></td>
+						<td></td>
+						<td></td>
+						<td><span id="d2"></span></td>
+					</tr>
+					<tr>
+						<td><input type="number" min="1" max="16" id="mg0-0" required></td>
+						<td><input type="number" min="1" max="16" id="mg0-1" required></td>
+						<td><input type="number" min="1" max="16" id="mg0-2" required></td>
+						<td><input type="number" min="1" max="16" id="mg0-3" required></td>
+						<td><span id="f1"></span></td>
+					</tr>
+					<tr>
+						<td><input type="number" min="1" max="16" id="mg1-0" required></td>
+						<td><input type="number" min="1" max="16" id="mg1-1" required></td>
+						<td><input type="number" min="1" max="16" id="mg1-2" required></td>
+						<td><input type="number" min="1" max="16" id="mg1-3" required></td>
+						<td><span id="f2"></span></td>
+					</tr>
+					<tr>
+						<td><input type="number" min="1" max="16" id="mg2-0" required></td>
+						<td><input type="number" min="1" max="16" id="mg2-1" required></td>
+						<td><input type="number" min="1" max="16" id="mg2-2" required></td>
+						<td><input type="number" min="1" max="16" id="mg2-3" required></td>
+						<td><span id="f3"></span></td>
+					</tr>
+					<tr>
+						<td><input type="number" min="1" max="16" id="mg3-0" required></td>
+						<td><input type="number" min="1" max="16" id="mg3-1" required></td>
+						<td><input type="number" min="1" max="16" id="mg3-2" required></td>
+						<td><input type="number" min="1" max="16" id="mg3-3" required></td>
+						<td><span id="f4"></span></td>
+					</tr>
+					<tr>
+						<td><span id="c1"></span></td>
+						<td><span id="c2"></span></td>
+						<td><span id="c3"></span></td>
+						<td><span id="c4"></span></td>
+						<td><span id="d1"></span></td>
+					</tr>
+				</table>
+			</div>
+			<div class="cajon">
+				<label for="result">Numero magico</label>
+				<span>34</span>
+			</div>
+		</div>
+	</div>
+
+	<div class="bloque">
+		<h1 class="titulo">Multiplicacion de matrices</h1>
+		<div class="estante">
+			<div class="cajon">
+				<label for="result">Matriz A</label>
+				<span id="valor20"></span>
+				<div class="estante">
+					<label for="fl">filas</label>
+					<input type="number" min="1" max="10" id="flA" name="fl" required>
+				</div>
+				<div class="estante">
+					<label for="cl">columnas</label>
+					<input type="number" min="1" max="10" id="clA" name="cl" required>
+				</div>
+			</div>
+			<div class="cajon">
+				<label for="result">Matriz B</label>
+				<span id="valor21"></span>
+				<div class="estante">
+					<label for="fl">filas</label>
+					<input type="number" min="1" max="10" id="flB" name="fl" required>
+				</div>
+				<div class="estante">
+					<label for="cl">columnas</label>
+					<input type="number" min="1" max="10" id="clB" name="cl" required>
+				</div>
+			</div>
+			<div class="cajon">
+				<input class="cj_boton" type="submit" value="Crear y multiplicar" onclick="Mmult()">
+			</div>
+			<div class="cajon">
+				<label for="result">Matriz C</label>
+				<span id="valor22"></span>
+			</div>
+			
+		</div>
+	</div>
+
+	<div>
+		<script type="text/javascript" src="./logica/numero.js"></script>
+		<script type="text/javascript" src="./logica/ParImpar.js"></script>
+		<script type="text/javascript" src="./logica/ParDes.js"></script>
+		<script type="text/javascript" src="./logica/Promedio.js"></script>
+		<script type="text/javascript" src="./logica/BuscaArray.js"></script>
+		<script type="text/javascript" src="./logica/pedidoArray.js"></script>
+		<script type="text/javascript" src="./logica/repetidos.js"></script>
+		<script type="text/javascript" src="./logica/EntBin.js"></script>
+		<script type="text/javascript" src="./logica/BinEnt.js"></script>
+		<script type="text/javascript" src="./logica/multiplica.js"></script>
+		<script type="text/javascript" src="./logica/ProPunto.js"></script>
+		<script type="text/javascript" src="./logica/poblacion.js"></script>
+		<script type="text/javascript" src="./logica/secuencia.js"></script>
+		<script type="text/javascript" src="./logica/while.js"></script>
+		<script type="text/javascript" src="./logica/numprimo.js"></script>
+		<script type="text/javascript" src="./logica/mcd.js"></script>
+		<script type="text/javascript" src="./logica/Fibonacci.js"></script>
+		<script type="text/javascript" src="./logica/SumaInt.js"></script>
+		<script type="text/javascript" src="./logica/Burbuja.js"></script>
+		<script type="text/javascript" src="./logica/letras.js"></script>
+		<script type="text/javascript" src="./logica/Matriz.js"></script>
+		<script type="text/javascript" src="./logica/OdMatriz.js"></script>
+		<script type="text/javascript" src="./logica/identico.js"></script>
+		<script type="text/javascript" src="./logica/magico.js"></script>
+		<script type="text/javascript" src="./logica/Mmult.js"></script>
+	</div>
+</body>
+
+</html>
