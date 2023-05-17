@@ -30,6 +30,10 @@ body {
     flex-wrap: wrap;
     padding: 20px;
 }
+#E1{
+    overflow: auto;
+    height: 100px;
+}
 .titulo{
     margin: 0;
     margin-bottom: 5px;
